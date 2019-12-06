@@ -1,7 +1,27 @@
 import Vue from 'vue';
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faUserSecret,
+  faArrowLeft,
+  faCopy,
+  faBookmark,
+} from '@fortawesome/free-solid-svg-icons';
+import {
+  faBookmark as faBookmarkRegular,
+} from '@fortawesome/free-regular-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 import App from './App.vue';
 import router from './router';
 import store from './store';
+
+library.add(faUserSecret);
+library.add(faArrowLeft);
+library.add(faCopy);
+library.add(faBookmark);
+library.add(faBookmarkRegular);
+Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 Vue.config.productionTip = false;
 
